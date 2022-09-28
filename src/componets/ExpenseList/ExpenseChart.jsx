@@ -1,6 +1,6 @@
 import Chart from '../Chart/Chart';
 
-const ExpenseFilerList = ({expenses}) => {
+const ExpenseChart = ({expenses}) => {
 
 const chartPoints = [
   {label: 'Jan',value:0},
@@ -18,15 +18,15 @@ const chartPoints = [
 ]
 for (const expense of expenses) {
   const expenseMonth = expense.date.getMonth();
-  chartPoints[expenseMonth].value += expense.amount;
+  chartPoints[expenseMonth].value += expense.price;
 }
   return (
 <>
-<div className="expensecontainer"> 
+{/* <div className="expensecontainer">  */}
        <Chart datapoint = {chartPoints}/>
-       </div>
+       {/* </div> */}
 </>
   )
 }
 
-export default ExpenseFilerList
+export default ExpenseChart

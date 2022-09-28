@@ -9,13 +9,12 @@ if(maxValue > 0 ){
 
 return (
     <div className="chart-bar">
-      ChartBar
       <div className="chart-bar-inner">
         <div className="chart-bar-fill" style = {{height : barHeight}}></div>
       </div>
         <div className="chart-bar-label">{label}</div>
     </div>
-    // key = {point.label} value = {point.value} maxValue = {null} label = {point.label}
+    
   );
 };
 

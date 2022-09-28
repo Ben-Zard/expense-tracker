@@ -6,12 +6,12 @@ const Chart = ({datapoint}) => {
     const totalMax = Math.max(...datapointvalue);
   return (
     <div className="chart">
-        {datapoint.map((point)=>
+        {datapoint.map((p)=>
         (
-        <ChartBar key = {point.label} 
-        value = {point.value} 
+        <ChartBar key = {p.label} 
+        value = {p.value} 
         maxValue = {totalMax} 
-        label = {point.label}/>
+        label = {p.label}/>
 ))}
         </div>
   )

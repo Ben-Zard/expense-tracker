@@ -37,7 +37,7 @@ const ExpenseForm = ({ onSaveData,onCancel }) => {
     e.preventDefault(); //stops from reloading page
     const expenseData = {
       name: name,
-      price: price,
+      price: +price,
       date: new Date(date),
     };
     onSaveData(expenseData);
