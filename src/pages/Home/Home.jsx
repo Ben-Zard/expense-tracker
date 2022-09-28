@@ -1,14 +1,14 @@
 import React from 'react'
 import ExpenseList from '../../componets/ExpenseList/ExpenseList'
-import ExpenseAll from '../../componets/ExpenseList/ExpenseAllList'
+import ExpenseAll from '../../componets/ExpenseList/ExpenseChart'
+
 
 const Home = () => {
 
   return (
     <>
-    {/* // <div className = "head">  */}
-    <ExpenseList/>
- <ExpenseAll/>
+  <ExpenseList/>
+  {/* <ExpenseAll/> */}
     </>
   )
 }

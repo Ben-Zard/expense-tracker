@@ -3,6 +3,7 @@ import ExpenseItem from "./ExpenseItems/ExpenseItem";
 import { Items } from "../../base/Items";
 import NewExpense from "../NewExpense/NewExpense";
 import ExpenseFilter from "./ExpenseFilter/ExpenseFilter";
+import ExpenseAllList from "./ExpenseChart"
 
 const ExpenseList = () => {
   const [expenses,setExpense] = useState(Items); 
@@ -28,6 +29,7 @@ return expense.date.getFullYear().toString() === year;
       (<h1> nothing for this year </h1>
       ) : ( <> 
       <ExpenseItem  key = {filterExpense.id} Items={filterExpense} />
+      <ExpenseAllList expenses = {filterExpense}/>
       </>
       )}
       <NewExpense onaddExpense={addExpenseHandler}/> 

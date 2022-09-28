@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const ExpenseForm = ({ onSaveData }) => {
+const ExpenseForm = ({ onSaveData,onCancel }) => {
   const [name, setname] = useState("");
   const [date, setDate] = useState("");
   const [price, setPrice] = useState("");
@@ -46,18 +46,11 @@ const ExpenseForm = ({ onSaveData }) => {
     setDate("");
   };
 
-  const [addexpense, setexpense] = useState(true);
-
-  const addsubmitHandler = () => {
-    setexpense(false);
-  };
   return (
     <>
-      {addexpense ? (
-        <button onClick={addsubmitHandler}> Add expense</button>
-      ) : (
         <form onSubmit={submitHandler}>
           <div className="newcont">
+
             <div className="newcontrol">
               <label>name</label>
               <input type="text" value={name} onChange={nameChangeHandler} />
@@ -84,11 +77,10 @@ const ExpenseForm = ({ onSaveData }) => {
             </div>
           </div>
           <div className="newactions">
-            <input type="reset" value="Reset" className="button" />
-            <input type="submit" className="button" value="Clear Add Expense" />
+            <input type="reset" value="Cancel" className="button" onClick ={onCancel} />
+            <input type="submit" className="button" value="Add Expense" />
           </div>
         </form>
-      )}
     </>
   );
 };
